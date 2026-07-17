@@ -1,142 +1,133 @@
-# ReviewGuard
+# 🛡️ ReviewGuard
 
-Rating-text mismatch and fake/templated review detector.
+**Rating/text mismatch and templated fake-review detector for marketplace platforms.**
 
-Most "review analysis" demos stop at sentiment. That's not the actual pain point
-for a marketplace trust & safety team. The thing that costs money is a 5-star
-review that reads like a complaint ("broke after two days, waste of money") or
-a wall of 1-star reviews that are all secretly the same templated text with
-three words swapped out. ReviewGuard flags both.
+[![Python](https://img.shields.io/badge/Python-3.10+-3776AB?logo=python&logoColor=white)](https://www.python.org/)
+[![FastAPI](https://img.shields.io/badge/FastAPI-009688?logo=fastapi&logoColor=white)](https://fastapi.tiangolo.com/)
+[![PyTorch](https://img.shields.io/badge/PyTorch-EE4C2C?logo=pytorch&logoColor=white)](https://pytorch.org/)
+[![Docker](https://img.shields.io/badge/Docker-2496ED?logo=docker&logoColor=white)](https://www.docker.com/)
+[![MLflow](https://img.shields.io/badge/MLflow-0194E2?logo=mlflow&logoColor=white)](https://mlflow.org/)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 
-## What it actually does
+Sentiment analysis tells you what a review says. It doesn't tell you whether that matches the star rating next to it — and that gap is where a lot of review fraud hides. A user taps ⭐⭐⭐⭐⭐ out of habit, then writes "broke after two days, waste of money." A coordinated fake-review campaign doesn't write from scratch — it edits the same template dozens of times. ReviewGuard catches both.
 
-1. **Mismatch scoring** — a fine-tuned DistilBERT classifier predicts the
-   sentiment of the review body independent of the star rating the user gave.
-   If the model is confident the text is negative but the rating is 4-5 stars
-   (or vice versa), that's flagged as a mismatch, with a 0-1 severity score.
-2. **Near-duplicate / templated review detection** — review text is embedded
-   with `sentence-transformers` (`all-MiniLM-L6-v2`), then clustered
-   (cosine similarity + DBSCAN) to catch reviews that are near-copies of each
-   other, which is one of the more common fake-review patterns on marketplaces.
-3. **Explainability** — SHAP is run over the classifier so that when something
-   gets flagged, you get back the actual tokens that pushed the prediction
-   away from the star rating, not just a bare score.
-4. **Model comparison** — logistic regression (TF-IDF) baseline vs TinyBERT vs
-   DistilBERT, tracked in MLflow (accuracy, F1, inference latency per review).
-5. **Export** — the winning model gets exported to TFLite so it can plausibly
-   run client-side (browser extension / mobile), not just server-side.
+## ✨ What it does
 
-## Repo layout
+🎯 **Mismatch scoring** — a fine-tuned DistilBERT classifier predicts review sentiment independently of the star rating, then flags disagreement with a continuous severity score rather than a binary flag.
+
+🔍 **Templated-review detection** — review text is embedded with sentence-transformers (all-MiniLM-L6-v2) and clustered via DBSCAN to surface near-duplicate reviews across a batch.
+
+💡 **Explainability** — SHAP values expose the exact tokens driving a flagged prediction, so results are auditable, not a black box.
+
+📊 **Model benchmarking** — TF-IDF + logistic regression baseline vs. TinyBERT vs. DistilBERT, every run logged to MLflow for direct comparison.
+
+📱 **Edge-ready export** — the winning model exports to TFLite for client-side use (browser extension or on-device).
+
+## 🏗️ How it's organized
+
+Think of the project in three layers: **data → models → serving.**
 
 ```
 reviewguard/
 ├── src/
-│   ├── data/            # dataset pulling + cleaning + synthetic fallback
-│   ├── models/          # baseline, DistilBERT, TinyBERT, TFLite export
-│   ├── mismatch/         # rating vs predicted-sentiment scorer
-│   ├── dedup/            # embedding + clustering for templated reviews
-│   ├── explain/           # SHAP wrapper
+│   ├── data/
+│   ├── models/
+│   ├── mismatch/
+│   ├── dedup/
+│   ├── explain/
 │   └── mlflow_tracking.py
-├── api/                 # FastAPI service
-├── tests/                # pytest suite
-├── scripts/              # one-off shell scripts for training / running
-├── data/                 # raw + processed (gitignored past a sample)
-├── artifacts/             # trained model weights, MLflow runs (gitignored)
-├── Dockerfile
-├── docker-compose.yml
-├── .github/workflows/ci.yml
-└── requirements.txt
+├── api/
+├── frontend/
+├── tests/
+└── scripts/
 ```
 
-## Setup
+| Folder | What lives here |
+|---|---|
+| 📥 `src/data/` | Downloads and cleans review data, or generates realistic fake data if no dataset is available |
+| 🧠 `src/models/` | The three models being compared — a simple baseline, TinyBERT, and DistilBERT |
+| ⚖️ `src/mismatch/` | Compares predicted sentiment against the star rating |
+| 🔗 `src/dedup/` | Groups similar reviews together to catch copy-paste fakes |
+| 💬 `src/explain/` | Explains *why* a review got flagged |
+| 🌐 `api/` | The FastAPI server that ties everything together |
+| 🖥️ `frontend/` | A simple web page to try it out |
+| ✅ `tests/` | Automated checks that everything still works |
 
-```bash
+## 🧰 Built with
+
+| Purpose | Tools |
+|---|---|
+| Backend | Python, FastAPI |
+| Machine learning | PyTorch, HuggingFace Transformers (DistilBERT, TinyBERT) |
+| Similarity detection | sentence-transformers, scikit-learn (DBSCAN) |
+| Explainability | SHAP |
+| Experiment tracking | MLflow |
+| Mobile/edge deployment | TensorFlow Lite |
+| Packaging | Docker |
+| Automation | GitHub Actions |
+
+
+## 🚀 Try it yourself
+
+**Step 1 — set up your environment**
+```
 python -m venv .venv
-source .venv/bin/activate      # Windows: .venv\Scripts\activate
+source .venv/bin/activate
 pip install -r requirements.txt
 ```
 
-## Getting data
-
-Real run (needs internet access to Hugging Face Hub):
-
-```bash
-python -m src.data.download --source amazon_polarity --limit 20000
+**Step 2 — get some data to test with** (no real dataset needed, this generates realistic sample data)
 ```
-
-No internet / quick local test — generates a synthetic but realistic dataset
-with deliberate rating/text mismatches and duplicated templates baked in so
-the rest of the pipeline has something to catch:
-
-```bash
 python -m src.data.synthetic --n 4000 --out data/processed/reviews.csv
 ```
 
-## Training + comparing models
-
-```bash
-python -m src.models.baseline --data data/processed/reviews.csv
+**Step 3 — train a model**
+```
 python -m src.models.train_distilbert --data data/processed/reviews.csv --epochs 3
-python -m src.models.train_tinybert --data data/processed/reviews.csv --epochs 3
 ```
 
-Each run logs params/metrics/latency to MLflow. Spin up the UI with:
-
-```bash
-mlflow ui --backend-store-uri ./artifacts/mlruns
+**Step 4 — start the server**
 ```
-
-Pick the winner and export it:
-
-```bash
-python -m src.models.convert_tflite --checkpoint artifacts/models/distilbert-final --out artifacts/models/reviewguard.tflite
-```
-
-## Running the API
-
-```bash
 uvicorn api.main:app --reload --port 8000
 ```
 
-Then:
-
-```bash
-curl -X POST http://localhost:8000/analyze \
-  -H "Content-Type: application/json" \
-  -d '{"rating": 5, "text": "Broke after two days, complete waste of money, do not buy."}'
+**Step 5 — test it with a real request**
+```
+curl -X POST http://localhost:8000/analyze -H "Content-Type: application/json" -d '{"rating": 5, "text": "Broke after two days, complete waste of money, do not buy."}'
 ```
 
-## Docker
+Prefer Docker over setting up Python locally? Skip straight to the section below.
 
-```bash
+## 🐳 Run with Docker
+
+One command, no local setup needed:
+```
 docker build -t reviewguard .
 docker run -p 8000:8000 reviewguard
 ```
+The API will be live at `http://localhost:8000`.
 
-## Tests
+## ✅ Run the tests
 
-```bash
+Make sure everything works before you rely on it:
+```
 pytest -v
 ```
 
-## Deploying
+## ☁️ Put it online
 
-Two options that cost nothing to keep running for a portfolio project:
+Both options below are free and take a few minutes:
 
-- **Hugging Face Spaces** (Docker SDK) — push this repo, point the Space at
-  the `Dockerfile`, done.
-- **Render** — connect the repo, set the start command to
-  `uvicorn api.main:app --host 0.0.0.0 --port $PORT`.
+🤗 **Hugging Face Spaces** — create a new Space, choose "Docker" as the SDK, and point it at this repo's `Dockerfile`. Done.
 
-## Known limitations / honest notes
+🎨 **Render** — connect this repo, and set the start command to:
+```
+uvicorn api.main:app --host 0.0.0.0 --port $PORT
+```
 
-- The DistilBERT/TinyBERT fine-tuning was done on a review-polarity dataset,
-  not a marketplace-specific fraud dataset — there isn't a public one, so
-  mismatch severity is a proxy signal, not a certified fraud score.
-- Dedup clustering flags *near*-duplicates; it will not catch fake reviews
-  that are individually well-written and non-repetitive. It's one signal
-  among several a real trust & safety pipeline would use.
-- TFLite export is included to demonstrate the workflow, not because this
-  particular model is small enough to be a great mobile citizen — DistilBERT
-  quantized is ~90MB, workable for browser-extension-adjacent use, not ideal
-  for a phone app.
+## 📄 License
+
+MIT — free to use, modify, and share.
+
+## Author
+Anjali Negi

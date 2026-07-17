@@ -1,0 +1,15 @@
+.venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+artifacts/mlruns/
+artifacts/models/
+data/raw/*
+!data/raw/.gitkeep
+data/processed/*
+!data/processed/.gitkeep
+!data/processed/sample_reviews.csv
+.env
+.DS_Store
+*.egg-info/
+.ipynb_checkpoints/

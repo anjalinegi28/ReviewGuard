@@ -1,0 +1,10 @@
+services:
+  reviewguard-api:
+    build: .
+    ports:
+      - "8000:8000"
+    environment:
+      - REVIEWGUARD_MODEL_DIR=/app/artifacts/models/distilbert-final
+    volumes:
+      - ./artifacts/models:/app/artifacts/models:ro
+    restart: unless-stopped

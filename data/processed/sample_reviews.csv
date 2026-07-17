@@ -1,0 +1,201 @@
+review_id,product_category,rating,text,true_sentiment,is_mismatch,is_templated_fake
+42,backpack,1,Smells like chemicals and gave me a headache. (backpack),negative,False,False
+139,coffee maker,4,"My whole family uses this now, no complaints. (coffee maker)",positive,False,False
+70,phone case,1,Battery died on day one and never charged again. (phone case),negative,False,False
+165,backpack,1,"Exceeded my expectations, using it daily now. (backpack)",positive,True,False
+115,wireless earbuds,1,"Cheaply made, nothing like the pictures. (wireless earbuds)",negative,False,False
+122,desk lamp,3,"It's fine, does what it says, nothing special. (desk lamp)",neutral,False,False
+43,kitchen blender,5,"Works exactly as described, very happy with this purchase. (kitchen blender)",positive,False,False
+50,coffee maker,1,Completely different product than what was pictured. (coffee maker),negative,False,False
+160,backpack,2,"Cheaply made, nothing like the pictures. (backpack)",negative,False,False
+117,desk lamp,4,"Exceeded my expectations, using it daily now. (desk lamp)",positive,False,False
+105,phone case,5,Better than the more expensive one I returned. (phone case),positive,False,False
+193,running shoes,5,"Amazing item!! Best purchase I ever made, 5 stars all the way, ",positive,False,True
+85,kitchen blender,3,"Average product, matches the description. (kitchen blender)",neutral,False,False
+33,backpack,2,Arrived damaged and customer service ignored my emails. (backpack),negative,False,False
+155,phone case,5,"My whole family uses this now, no complaints. (phone case)",positive,False,False
+11,backpack,3,"Ok for the price, wouldn't expect more. (backpack)",neutral,False,False
+153,kitchen blender,4,Shipped fast and the packaging was solid. (kitchen blender),positive,False,False
+39,running shoes,1,"Cheaply made, nothing like the pictures. (running shoes)",negative,False,False
+96,phone case,2,Arrived damaged and customer service ignored my emails. (phone case),negative,False,False
+68,yoga mat,2,"Stopped working within a week, do not buy this. (yoga mat)",negative,False,False
+177,backpack,2,Simple to set up and does the job well. (backpack),positive,True,False
+158,phone case,3,"Average product, matches the description. (phone case)",neutral,False,False
+121,backpack,4,"Works exactly as described, very happy with this purchase. (backpack)",positive,False,False
+125,yoga mat,5,"Sturdy build, feels like it'll last for years. (yoga mat)",positive,False,False
+187,coffee maker,5,"I love this thing so much, changed my life, would recommend to everyone ",positive,False,True
+15,backpack,2,Battery died on day one and never charged again. (backpack),negative,False,False
+164,backpack,1,"Works exactly as described, very happy with this purchase. (backpack)",positive,True,False
+156,wireless earbuds,5,"Exceeded my expectations, using it daily now. (wireless earbuds)",positive,False,False
+197,desk lamp,5,"This product is the best thing I've bought this year,  highly recommend!!",positive,False,True
+99,kitchen blender,1,Completely different product than what was pictured. (kitchen blender),negative,False,False
+119,yoga mat,5,Better than the more expensive one I returned. (yoga mat),positive,False,False
+77,yoga mat,5,"Works exactly as described, very happy with this purchase. (yoga mat)",positive,False,False
+75,backpack,3,"It's fine, does what it says, nothing special. (backpack)",neutral,False,False
+69,kitchen blender,2,"Broke after two days, complete waste of money. (kitchen blender)",negative,False,False
+113,desk lamp,2,"Cheaply made, nothing like the pictures. (desk lamp)",negative,False,False
+61,desk lamp,4,Simple to set up and does the job well. (desk lamp),positive,False,False
+143,kitchen blender,4,"Works exactly as described, very happy with this purchase. (kitchen blender)",positive,False,False
+157,wireless earbuds,5,"Great quality for the price, would buy again. (wireless earbuds)",positive,False,False
+98,backpack,2,"Broke after two days, complete waste of money. (backpack)",negative,False,False
+5,kitchen blender,2,"Stopped working within a week, do not buy this. (kitchen blender)",negative,False,False
+110,wireless earbuds,3,"Average product, matches the description. (wireless earbuds)",neutral,False,False
+29,wireless earbuds,5,Shipped fast and the packaging was solid. (wireless earbuds),positive,False,False
+83,phone case,3,"It's fine, does what it says, nothing special. (phone case)",neutral,False,False
+26,kitchen blender,5,"Works exactly as described, very happy with this purchase. (kitchen blender)",positive,False,False
+40,coffee maker,3,"Ok for the price, wouldn't expect more. (coffee maker)",neutral,False,False
+126,running shoes,2,"Broke after two days, complete waste of money. (running shoes)",negative,False,False
+116,wireless earbuds,5,"Works exactly as described, very happy with this purchase. (wireless earbuds)",positive,False,False
+8,phone case,2,Battery died on day one and never charged again. (phone case),negative,False,False
+149,kitchen blender,5,"Great quality for the price, would buy again. (kitchen blender)",positive,False,False
+71,yoga mat,2,Smells like chemicals and gave me a headache. (yoga mat),negative,False,False
+136,kitchen blender,3,"Average product, matches the description. (kitchen blender)",neutral,False,False
+148,yoga mat,3,"Does the job, no strong feelings either way. (yoga mat)",neutral,False,False
+186,coffee maker,5,"I love this item so much, changed my life, would recommend to everyone fast shipping",positive,False,True
+7,yoga mat,3,"Does the job, no strong feelings either way. (yoga mat)",neutral,False,False
+22,yoga mat,3,"Ok for the price, wouldn't expect more. (yoga mat)",neutral,False,False
+173,backpack,5,"Broke after two days, complete waste of money. (backpack)",negative,True,False
+166,kitchen blender,1,"My whole family uses this now, no complaints. (kitchen blender)",positive,True,False
+135,yoga mat,4,"My whole family uses this now, no complaints. (yoga mat)",positive,False,False
+78,kitchen blender,4,"My whole family uses this now, no complaints. (kitchen blender)",positive,False,False
+172,yoga mat,5,Completely different product than what was pictured. (yoga mat),negative,True,False
+65,yoga mat,2,Smells like chemicals and gave me a headache. (yoga mat),negative,False,False
+184,yoga mat,4,Battery died on day one and never charged again. (yoga mat),negative,True,False
+127,phone case,1,Battery died on day one and never charged again. (phone case),negative,False,False
+79,kitchen blender,3,"Does the job, no strong feelings either way. (kitchen blender)",neutral,False,False
+14,yoga mat,2,"Cheaply made, nothing like the pictures. (yoga mat)",negative,False,False
+72,yoga mat,2,"Had to return it, was defective out of the box. (yoga mat)",negative,False,False
+2,phone case,3,"Average product, matches the description. (phone case)",neutral,False,False
+9,running shoes,3,"Does the job, no strong feelings either way. (running shoes)",neutral,False,False
+31,kitchen blender,1,Arrived damaged and customer service ignored my emails. (kitchen blender),negative,False,False
+80,yoga mat,3,"It's fine, does what it says, nothing special. (yoga mat)",neutral,False,False
+161,backpack,4,"Stopped working within a week, do not buy this. (backpack)",negative,True,False
+3,yoga mat,3,"Average product, matches the description. (yoga mat)",neutral,False,False
+13,yoga mat,3,"Does the job, no strong feelings either way. (yoga mat)",neutral,False,False
+54,running shoes,2,Arrived damaged and customer service ignored my emails. (running shoes),negative,False,False
+45,desk lamp,2,"Broke after two days, complete waste of money. (desk lamp)",negative,False,False
+188,coffee maker,5,"I love this gadget so much, changed my life, would recommend to everyone seriously",positive,False,True
+60,desk lamp,3,"Does the job, no strong feelings either way. (desk lamp)",neutral,False,False
+169,desk lamp,1,"Great quality for the price, would buy again. (desk lamp)",positive,True,False
+74,phone case,1,Completely different product than what was pictured. (phone case),negative,False,False
+23,desk lamp,3,"Does the job, no strong feelings either way. (desk lamp)",neutral,False,False
+142,coffee maker,3,"Average product, matches the description. (coffee maker)",neutral,False,False
+62,kitchen blender,1,"Broke after two days, complete waste of money. (kitchen blender)",negative,False,False
+141,coffee maker,4,Better than the more expensive one I returned. (coffee maker),positive,False,False
+145,backpack,2,Arrived damaged and customer service ignored my emails. (backpack),negative,False,False
+150,backpack,3,"Average product, matches the description. (backpack)",neutral,False,False
+194,running shoes,5,"Amazing item!! Best purchase I ever made, 5 stars all the way, seriously",positive,False,True
+95,desk lamp,5,"My whole family uses this now, no complaints. (desk lamp)",positive,False,False
+163,coffee maker,2,"Exceeded my expectations, using it daily now. (coffee maker)",positive,True,False
+179,desk lamp,1,"Works exactly as described, very happy with this purchase. (desk lamp)",positive,True,False
+19,coffee maker,1,Completely different product than what was pictured. (coffee maker),negative,False,False
+12,backpack,3,"Average product, matches the description. (backpack)",neutral,False,False
+134,backpack,5,"Works exactly as described, very happy with this purchase. (backpack)",positive,False,False
+6,desk lamp,5,"Great quality for the price, would buy again. (desk lamp)",positive,False,False
+198,desk lamp,5,"This item is the best thing I've bought this year, no joke highly recommend!!",positive,False,True
+34,running shoes,5,"Works exactly as described, very happy with this purchase. (running shoes)",positive,False,False
+176,yoga mat,5,Arrived damaged and customer service ignored my emails. (yoga mat),negative,True,False
+93,kitchen blender,5,Shipped fast and the packaging was solid. (kitchen blender),positive,False,False
+104,wireless earbuds,4,"Great quality for the price, would buy again. (wireless earbuds)",positive,False,False
+88,backpack,2,"Stopped working within a week, do not buy this. (backpack)",negative,False,False
+48,desk lamp,1,Smells like chemicals and gave me a headache. (desk lamp),negative,False,False
+175,phone case,4,Battery died on day one and never charged again. (phone case),negative,True,False
+36,desk lamp,3,"Average product, matches the description. (desk lamp)",neutral,False,False
+170,running shoes,4,Completely different product than what was pictured. (running shoes),negative,True,False
+37,yoga mat,4,Better than the more expensive one I returned. (yoga mat),positive,False,False
+25,backpack,3,"Average product, matches the description. (backpack)",neutral,False,False
+154,desk lamp,3,"It's fine, does what it says, nothing special. (desk lamp)",neutral,False,False
+47,phone case,2,"Stopped working within a week, do not buy this. (phone case)",negative,False,False
+1,yoga mat,1,"Had to return it, was defective out of the box. (yoga mat)",negative,False,False
+57,kitchen blender,3,"Does the job, no strong feelings either way. (kitchen blender)",neutral,False,False
+90,desk lamp,3,"It's fine, does what it says, nothing special. (desk lamp)",neutral,False,False
+58,wireless earbuds,3,"It's fine, does what it says, nothing special. (wireless earbuds)",neutral,False,False
+35,backpack,4,"My whole family uses this now, no complaints. (backpack)",positive,False,False
+118,backpack,4,"My whole family uses this now, no complaints. (backpack)",positive,False,False
+10,wireless earbuds,2,Battery died on day one and never charged again. (wireless earbuds),negative,False,False
+189,running shoes,5,"Amazing thing!! Best purchase I ever made, 5 stars all the way, seriously",positive,False,True
+52,yoga mat,1,"Stopped working within a week, do not buy this. (yoga mat)",negative,False,False
+130,yoga mat,2,"Cheaply made, nothing like the pictures. (yoga mat)",negative,False,False
+111,kitchen blender,4,"Sturdy build, feels like it'll last for years. (kitchen blender)",positive,False,False
+151,coffee maker,1,"Broke after two days, complete waste of money. (coffee maker)",negative,False,False
+87,wireless earbuds,3,"It's fine, does what it says, nothing special. (wireless earbuds)",neutral,False,False
+183,kitchen blender,2,Simple to set up and does the job well. (kitchen blender),positive,True,False
+128,yoga mat,5,Shipped fast and the packaging was solid. (yoga mat),positive,False,False
+51,yoga mat,1,"Had to return it, was defective out of the box. (yoga mat)",negative,False,False
+195,running shoes,5,"Amazing gadget!! Best purchase I ever made, 5 stars all the way, no joke",positive,False,True
+190,running shoes,5,"Amazing gadget!! Best purchase I ever made, 5 stars all the way, fast shipping",positive,False,True
+147,kitchen blender,3,"It's fine, does what it says, nothing special. (kitchen blender)",neutral,False,False
+16,coffee maker,3,"Ok for the price, wouldn't expect more. (coffee maker)",neutral,False,False
+180,backpack,2,"Exceeded my expectations, using it daily now. (backpack)",positive,True,False
+182,desk lamp,1,"Exceeded my expectations, using it daily now. (desk lamp)",positive,True,False
+129,wireless earbuds,5,Better than the more expensive one I returned. (wireless earbuds),positive,False,False
+102,coffee maker,3,"Average product, matches the description. (coffee maker)",neutral,False,False
+55,phone case,4,"Works exactly as described, very happy with this purchase. (phone case)",positive,False,False
+28,yoga mat,1,"Cheaply made, nothing like the pictures. (yoga mat)",negative,False,False
+41,coffee maker,4,"Sturdy build, feels like it'll last for years. (coffee maker)",positive,False,False
+159,kitchen blender,3,"It's fine, does what it says, nothing special. (kitchen blender)",neutral,False,False
+133,coffee maker,3,"Average product, matches the description. (coffee maker)",neutral,False,False
+138,kitchen blender,2,Smells like chemicals and gave me a headache. (kitchen blender),negative,False,False
+199,desk lamp,5,"This product is the best thing I've bought this year, amazing seller too highly recommend!!",positive,False,True
+92,wireless earbuds,3,"Average product, matches the description. (wireless earbuds)",neutral,False,False
+191,running shoes,5,"Amazing purchase!! Best purchase I ever made, 5 stars all the way, 10/10",positive,False,True
+4,desk lamp,4,"Exceeded my expectations, using it daily now. (desk lamp)",positive,False,False
+91,yoga mat,3,"Average product, matches the description. (yoga mat)",neutral,False,False
+192,running shoes,5,"Amazing item!! Best purchase I ever made, 5 stars all the way, ",positive,False,True
+38,phone case,2,Smells like chemicals and gave me a headache. (phone case),negative,False,False
+137,kitchen blender,5,Better than the more expensive one I returned. (kitchen blender),positive,False,False
+181,kitchen blender,4,Smells like chemicals and gave me a headache. (kitchen blender),negative,True,False
+140,coffee maker,2,"Cheaply made, nothing like the pictures. (coffee maker)",negative,False,False
+123,coffee maker,1,"Broke after two days, complete waste of money. (coffee maker)",negative,False,False
+97,backpack,2,Arrived damaged and customer service ignored my emails. (backpack),negative,False,False
+196,running shoes,5,"Amazing purchase!! Best purchase I ever made, 5 stars all the way, 10/10",positive,False,True
+67,backpack,2,Smells like chemicals and gave me a headache. (backpack),negative,False,False
+46,kitchen blender,4,Shipped fast and the packaging was solid. (kitchen blender),positive,False,False
+131,coffee maker,5,Better than the more expensive one I returned. (coffee maker),positive,False,False
+162,wireless earbuds,4,Smells like chemicals and gave me a headache. (wireless earbuds),negative,True,False
+146,wireless earbuds,3,"Does the job, no strong feelings either way. (wireless earbuds)",neutral,False,False
+94,backpack,2,Smells like chemicals and gave me a headache. (backpack),negative,False,False
+20,kitchen blender,3,"Does the job, no strong feelings either way. (kitchen blender)",neutral,False,False
+171,wireless earbuds,5,Arrived damaged and customer service ignored my emails. (wireless earbuds),negative,True,False
+100,kitchen blender,1,"Cheaply made, nothing like the pictures. (kitchen blender)",negative,False,False
+108,coffee maker,3,"Average product, matches the description. (coffee maker)",neutral,False,False
+120,running shoes,5,"My whole family uses this now, no complaints. (running shoes)",positive,False,False
+106,yoga mat,4,"Works exactly as described, very happy with this purchase. (yoga mat)",positive,False,False
+84,backpack,2,"Broke after two days, complete waste of money. (backpack)",negative,False,False
+21,backpack,5,Shipped fast and the packaging was solid. (backpack),positive,False,False
+185,coffee maker,5,"I love this product so much, changed my life, would recommend to everyone 10/10",positive,False,True
+82,backpack,1,"Cheaply made, nothing like the pictures. (backpack)",negative,False,False
+132,desk lamp,1,Smells like chemicals and gave me a headache. (desk lamp),negative,False,False
+152,backpack,4,Simple to set up and does the job well. (backpack),positive,False,False
+49,wireless earbuds,2,"Stopped working within a week, do not buy this. (wireless earbuds)",negative,False,False
+64,wireless earbuds,3,"Ok for the price, wouldn't expect more. (wireless earbuds)",neutral,False,False
+103,kitchen blender,3,"Ok for the price, wouldn't expect more. (kitchen blender)",neutral,False,False
+89,phone case,5,"Sturdy build, feels like it'll last for years. (phone case)",positive,False,False
+168,phone case,1,"My whole family uses this now, no complaints. (phone case)",positive,True,False
+24,running shoes,1,"Cheaply made, nothing like the pictures. (running shoes)",negative,False,False
+174,wireless earbuds,2,Better than the more expensive one I returned. (wireless earbuds),positive,True,False
+44,backpack,5,"My whole family uses this now, no complaints. (backpack)",positive,False,False
+56,phone case,3,"Does the job, no strong feelings either way. (phone case)",neutral,False,False
+86,phone case,3,"Does the job, no strong feelings either way. (phone case)",neutral,False,False
+30,backpack,3,"It's fine, does what it says, nothing special. (backpack)",neutral,False,False
+53,wireless earbuds,5,Shipped fast and the packaging was solid. (wireless earbuds),positive,False,False
+18,yoga mat,4,"Sturdy build, feels like it'll last for years. (yoga mat)",positive,False,False
+200,desk lamp,5,"This item is the best thing I've bought this year, seriously highly recommend!!",positive,False,True
+63,wireless earbuds,3,"It's fine, does what it says, nothing special. (wireless earbuds)",neutral,False,False
+124,yoga mat,3,"It's fine, does what it says, nothing special. (yoga mat)",neutral,False,False
+32,coffee maker,2,Arrived damaged and customer service ignored my emails. (coffee maker),negative,False,False
+112,desk lamp,5,Better than the more expensive one I returned. (desk lamp),positive,False,False
+59,running shoes,3,"Average product, matches the description. (running shoes)",neutral,False,False
+167,kitchen blender,2,Shipped fast and the packaging was solid. (kitchen blender),positive,True,False
+73,phone case,3,"Does the job, no strong feelings either way. (phone case)",neutral,False,False
+109,backpack,3,"It's fine, does what it says, nothing special. (backpack)",neutral,False,False
+178,backpack,4,"Cheaply made, nothing like the pictures. (backpack)",negative,True,False
+17,phone case,4,"My whole family uses this now, no complaints. (phone case)",positive,False,False
+66,wireless earbuds,5,"Great quality for the price, would buy again. (wireless earbuds)",positive,False,False
+144,coffee maker,1,Smells like chemicals and gave me a headache. (coffee maker),negative,False,False
+81,kitchen blender,2,"Stopped working within a week, do not buy this. (kitchen blender)",negative,False,False
+76,yoga mat,3,"Average product, matches the description. (yoga mat)",neutral,False,False
+114,desk lamp,3,"Does the job, no strong feelings either way. (desk lamp)",neutral,False,False
+101,desk lamp,3,"Ok for the price, wouldn't expect more. (desk lamp)",neutral,False,False
+107,phone case,5,"Works exactly as described, very happy with this purchase. (phone case)",positive,False,False
+27,yoga mat,3,"Ok for the price, wouldn't expect more. (yoga mat)",neutral,False,False
